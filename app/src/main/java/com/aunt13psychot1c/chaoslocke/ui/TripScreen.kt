@@ -32,7 +32,7 @@ import com.aunt13psychot1c.chaoslocke.crypto.ChaosCipher
 @Composable
 fun TripScreen() {
     val context = LocalContext.current
-    var field by rememberSaveable { mutableStateOf("Davi#chaosqueen") }
+    var field by rememberSaveable { mutableStateOf("Anonymous#mysecret") }
     var escape by rememberSaveable { mutableStateOf(true) }
 
     val hash = field.indexOf('#')
@@ -64,7 +64,7 @@ fun TripScreen() {
         }
         Card {
             if (trip == null) {
-                Text("Add # and a key after the name, like Davi#mysecret", fontWeight = FontWeight.Bold)
+                Text("Add # and a key after the name, like Anonymous#mysecret", fontWeight = FontWeight.Bold)
             } else {
                 SelectionContainer {
                     Column {
