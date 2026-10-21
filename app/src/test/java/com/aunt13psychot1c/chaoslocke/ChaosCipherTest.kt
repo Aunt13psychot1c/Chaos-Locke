@@ -68,7 +68,10 @@ class ChaosCipherTest {
         }
         assertEquals(0, slipped)
         expectError(locked + "🍓", "isn't part of the code")
-        expectError(locked.dropLast(4), "cut off")
+        // Cut whole emoji, not UTF-16 units: ⚡ and ⚓ are one unit long, the rest are two, so a
+        // fixed character count sometimes split an emoji in half and failed at random.
+        val cps = locked.codePoints().toArray()
+        expectError(String(cps, 0, cps.size - 2), "cut off")
         expectError("   ", "Paste")
         expectError("This reminds me of the Earthquake", "regular message")
     }
