@@ -1,0 +1,1 @@
+Lock secret messages with a key and send them as emoji. Plus tripcodes.

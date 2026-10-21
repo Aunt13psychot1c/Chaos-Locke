@@ -1,0 +1,16 @@
+Chaos Locke turns your secret messages into a string of tough-guy emoji. Anybody can see the emoji, but only someone who knows your key can turn them back into words.
+
+<b>What it does</b>
+<ul>
+<li>Lock and unlock messages with a secret key. They come out as 64 kinds of emoji (no hearts, no fruit).</li>
+<li>Send them anywhere: texts, Discord, Messenger, email. Share a locked message into Chaos Locke from another app, or highlight it and pick Chaos Locke from the pop-up menu.</li>
+<li>Tripcodes: type Name#key and see your imageboard tripcode, with every step of the recipe shown.</li>
+<li>Chaos Locke for Dummies: a built-in, plain-English guide that opens the first time.</li>
+<li>Big, easy-to-read text, with light and dark themes.</li>
+</ul>
+
+<b>Private by design</b>
+Chaos Locke has no internet permission at all, so nothing you type can leave your phone. No ads, no trackers, no accounts.
+
+<b>How strong is it?</b>
+Diary-lock strong: great for private notes between friends. The lock is DES, the classic Unix scheme from the 1970s, so a serious expert with big computers could break it. Don't use it for bank details or passwords.
