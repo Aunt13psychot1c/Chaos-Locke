@@ -54,7 +54,7 @@ private val SECTIONS = listOf(
     Section("🎭 What's a tripcode?", listOf(
         "On imageboards (like 4chan) there are no accounts, so anybody can type any name. A tripcode proves it's really you.",
         "1. Tap 🎭 Tripcode.",
-        "2. Type your name, then #, then a secret key. Example: Davi#mysecret",
+        "2. Type your name, then #, then a secret key. Example: Anonymous#mysecret",
         "3. Your code shows up, like !X/EFwDtXFE. Same key, same code, every time.",
         "On the board itself you type the same Name#key in the name box, and the site does the math for you. This tab lets you see your code ahead of time, or check someone else's.",
         "Leave \"Match 4chan\" on unless you know your board doesn't change & < > \"."
