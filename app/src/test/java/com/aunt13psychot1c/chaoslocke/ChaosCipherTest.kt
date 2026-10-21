@@ -70,6 +70,7 @@ class ChaosCipherTest {
         expectError(locked + "🍓", "isn't part of the code")
         expectError(locked.dropLast(4), "cut off")
         expectError("   ", "Paste")
+        expectError("This reminds me of the Earthquake", "regular message")
     }
 
     @Test fun alphabetHas64DistinctEmoji() {

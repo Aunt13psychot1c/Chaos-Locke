@@ -94,6 +94,9 @@ object ChaosCipher {
                 throw UnlockException(CUT_OFF)
             }
         } else {
+            // Tapping Unlock on a plain message is the usual slip; say so instead of pointing at
+            // its first letter as a "bad" character.
+            if (t.codePoints().noneMatch { it == MARK || EMOJI.contains(it) }) throw UnlockException(NOT_LOCKED)
             fromEmoji(t)
         }
         if (raw.size < 16 || raw.size % 8 != 0) throw UnlockException(CUT_OFF)
@@ -245,6 +248,7 @@ object ChaosCipher {
     const val TO = "ABCDEFGabcdef"
     private const val ALPHA = "./0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     private const val WRONG = "Wrong key, or the message got changed."
+    private const val NOT_LOCKED = "That's a regular message, not a locked one. Tap 🔒 Lock to lock it."
     private const val CUT_OFF = "The message got cut off or changed. Copy the whole thing again."
 
     private val PC1 = intArrayOf(57,49,41,33,25,17,9,1,58,50,42,34,26,18,10,2,59,51,43,35,27,19,11,3,60,52,44,36,
