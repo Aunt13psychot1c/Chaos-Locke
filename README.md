@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/icon.png" width="160" alt="Chaos Locke icon: a black chaos star with a glowing blue padlock in its center ring">
+</p>
+
 # 🔐 Chaos Locke
 
 **Secret messages in tough-guy emoji, plus imageboard tripcodes.** Lock a message with a key and it turns into something like 🔐🐗🦏🚂🐉🔥💀… Only someone with the same key can turn it back into words.

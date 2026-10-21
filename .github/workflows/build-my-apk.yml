@@ -42,8 +42,9 @@ jobs:
           # On failure, repeat the compiler's complaints as annotations so they show on the
           # run's summary page without digging through the full log.
           ./gradlew testDebugUnitTest assemblePreview --no-daemon --stacktrace 2>&1 | tee build.log || {
-            grep -E '^e: |error:|What went wrong|^> |FAILED|Expected|but was' build.log | head -40 |
-              while IFS= read -r line; do echo "::error::${line}"; done
+            grep -v '> Task' build.log | grep -E -A2 '^e: |rror|What went wrong|Caused by|FAILED|Expected|but was' |
+              head -40 | tr '\n' ' ' | cut -c1-3500 | sed 's/^/::error::/'
+            echo
             exit 1
           }
 
