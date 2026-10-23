@@ -1,1 +1,1 @@
-First release: emoji secret messages, tripcodes, share and highlight shortcuts, and a for-dummies guide.
+Unlocking a regular message now says to tap Lock instead.
